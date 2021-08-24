@@ -12,8 +12,8 @@ function App() {
         <Router>
             <Switch>
                 <Route path={"/"} component={Home}/>
-                <Route path={"/cart"} component={Cart}/>
-                <Route path={"/product/:product_id"} component={Product} />
+                <Route exact path={"/cart"} component={Cart}/>
+                <Route exact path={"/product/:product_id"} component={Product} />
                 <Route component={pageNotFound} />
             </Switch>
         </Router>
