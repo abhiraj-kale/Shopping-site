@@ -9,15 +9,14 @@ function App() {
             <h1> Sorry the Page you are looking for doesn't exist.</h1>
     )
     return (
-        <div>THis is a line</div>
-        /*<Router>
+        <Router>
             <Switch>
-                <Route exact path={"/"} component={Home}/>
-                <Route exact path={"/cart"} component={Cart}/>
-                <Route exact path={"/product/:product_id"} component={Product} />
+                <Route path={"/"} component={Home}/>
+                <Route path={"/cart"} component={Cart}/>
+                <Route path={"/product/:product_id"} component={Product} />
                 <Route component={pageNotFound} />
             </Switch>
-        </Router>*/
+        </Router>
     )
 }
 
