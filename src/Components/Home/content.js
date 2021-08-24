@@ -65,6 +65,19 @@ function Content() {
     return (
         <div>
             <Container className={"h-100 w-100"}>
+                <div className="jumbotron jumbotron-fluid">
+                    <div className="container">
+                        <h1 className="display-3">Shopping Site</h1>
+                        <p className="lead">Get the latest fashion designs out there. Created using <label
+                            className={"text text-primary"}>React.js</label></p>
+                    </div>
+                </div>
+
+                <div className="jumbotron jumbotron-fluid p-4">
+                    <div className="container">
+                        <p className="lead">Upto 50% Off on Latest Designs!</p>
+                    </div>
+                </div>
                 <Slider/>
                 <div className="jumbotron jumbotron-fluid p-5">
                     <div className="container">
@@ -74,7 +87,7 @@ function Content() {
 
                 <Row className={"alert-light"}>
 
-                    {content.map((key, i) => key)}
+                    {content.map((key) => key)}
 
                 </Row>
             </Container>
