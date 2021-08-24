@@ -1,5 +1,5 @@
 import './App.css';
-import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
+import {Route, HashRouter as Router, Switch} from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Product from "./Components/Product/Product";
 import Cart from "./Components/Checkout/Cart";
@@ -9,7 +9,7 @@ function App() {
             <h1> Sorry the Page you are looking for doesn't exist.</h1>
     )
     return (
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router>
             <Switch>
                 <Route exact path={"/"} component={Home}/>
                 <Route exact path={"/cart"} component={Cart}/>
