@@ -9,9 +9,9 @@ function App() {
             <h1> Sorry the Page you are looking for doesn't exist.</h1>
     )
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <Switch>
-                <Route path={"/"} component={Home}/>
+                <Route exact path={"/"} component={Home}/>
                 <Route exact path={"/cart"} component={Cart}/>
                 <Route exact path={"/product/:product_id"} component={Product} />
                 <Route component={pageNotFound} />
