@@ -39,15 +39,18 @@ function Content() {
     ]
     let content = [];
 
-    const navToProductPage = (product_id) => {
-        console.log(history)
-        history.push(`/product/${product_id}`)
+    const navToProductPage = (key) => {
+        history.push({
+            pathname: `/product`,
+            search: encodeURI(`?id=${key.id}&photo=${key.photo}&name=${key.name}&desc=${key.desc}&price=${key.price}`),
+            state: {key: key}
+        })
     }
 
     data.forEach((key) => [
         content.push(
-            <Col>
-                <Card style={{width: '18rem'}} onClick={() => navToProductPage(key.id)}>
+            <Col id={"featured"}>
+                <Card style={{width: '18rem', cursor: 'pointer'}} onClick={() => navToProductPage(key)}>
                     <Card.Img variant="top" src={key.photo}/>
                     <Card.Body>
                         <Card.Title>{key.name}</Card.Title>
@@ -63,7 +66,7 @@ function Content() {
     console.log(content)
 
     return (
-        <div>
+        <div className={"mt-5"}>
             <Container className={"h-100 w-100"}>
                 <div className="jumbotron jumbotron-fluid">
                     <div className="container">
